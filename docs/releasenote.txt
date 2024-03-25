@@ -1,0 +1,2 @@
+Release 0.0.001
+- beautiful store 영문버전 완성.

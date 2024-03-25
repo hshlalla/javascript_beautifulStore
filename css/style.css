@@ -1,0 +1,440 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Set the default font for the entire page */
+    font-size: 16px; /* Set the default font size */
+    background-color: #f5f3ef;
+}
+#video-container {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    background-color:white;
+    
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0;  /* 여백 추가 */
+}
+/* Back to Top Button Styling */
+#backToTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #83a80b; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: none; /* Button is hidden by default */
+}
+
+#backToTopButton:hover {
+    background-color: #83a80b; /* Button background color on hover */
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: white; /* Light background color for the navbar */
+    margin-bottom: 20px; /* Space below the navbar */
+    
+}
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Aligns the logo vertically */
+}
+
+.navbar-brand img {
+    height: 48px; /* Logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.navbar-toggler {
+    border: none; /* Removes the border from the toggle button */
+}
+
+.navbar-nav {
+    text-align: center;
+    margin-right: -15px; /* Aligns nav items to the right */
+}
+
+.nav-link {
+    color: #83a80b; /* Primary color for nav links */
+    margin-right: 15px; /* Space between nav items */
+}
+
+.nav-link:hover {
+    color: #e0ebbc; /* Darker shade for hover effect */
+}
+
+/* management section*/
+.management{ padding-top:39.27%; background:url('../images/index_bg_management01.png') no-repeat center ; background-size: cover; position: relative;}
+.management > div{ width:100%; padding:0 98px; position: absolute; top:0; bottom: 0; left:50%; transform: translateX(-50%);}
+.main_txt{ padding-top:32px; letter-spacing: -.4px; line-height: 1; text-align: center;}
+.main_txt strong{ padding-bottom:32px; color:#83a80b; font-size: 45px; letter-spacing:-2.4px; display:block; }
+.main_txt strong br{display:none;}
+.main_txt p{ color:#333; font-size: 24px; letter-spacing:-1.2px; }
+section.active .main_txt strong{ animation:  title_ani .7s both;}
+section.active .main_txt p{ animation: title_ani .7s .2s both;}
+
+.main_txt p br{ display:none;}
+.num_count { margin-top:20px; position:relative;}
+.num_count ul{ padding-top: 47px; font-size: 0; position: relative; text-align: center;}
+.num_count > em{ color:rgba(77,77,79,.4); font-size:18px; position: absolute; top:0; right:0; content: '2019ë…„ ê¸°ì¤€'; display:block;}
+.num_count ul li{ width:24%;/* padding:0 51px;*/ color: #111; letter-spacing: -.6px; position: relative; display: inline-block; }
+.num_count ul li+li:before{ width:1px; height:60px; background: #ccc;; position: absolute; top:50%; left:0; content: ''; display:block; transform: translateY(-50%);}
+.num_count ul li strong{ font-size:48px; font-weight: 900;letter-spacing: -1.5px;}
+.num_count ul li span{ font-size: 18px; display:block;}
+.num_count ul li em{ padding-left: 2px; color:#111; font-size: 16px;}
+
+.word{ width:81%; position: absolute; left: 50%; bottom:15%; transform: translateX(-50%);}
+.word:after{ content: ''; display: block; clear: both;}
+.word > *{ width:50%; float: left;}
+.word .main_txt{ padding-top:0; text-align: left;} 
+.word div strong{ padding-bottom:33px; color:#111; line-height: 1; letter-spacing:-1.8px; display: block; text-align: left;}
+.word div p{ line-height: 1.5; text-align: left;}
+.word ul { text-align: center;}
+.word ul li{ width:49%; padding:0 16px; color:#333; font-size:20px; font-weight:600; display:inline-block; text-align: center; vertical-align: top;}
+.word ul li:before{width:263px; height:206px; margin:0 auto 10px; content: ''; display: block; background:no-repeat center; background-size: 100% auto; position:static; }
+.word ul li.star:before{ background-image: url('../images/index_img_word01.png');}
+.word ul li.friendly:before{ background-image: url('../images/index_img_word02.png');}
+
+section.active .word ul li.star:before{animation: word .7s .7s both; }
+section.active .word ul li.friendly:before{animation: word .7s .8s both; }
+section.active .word .main_txt strong{ opacity: 1; animation: unset;}
+
+@keyframes word{
+    0%{ transform: translateY(30px); opacity: 0;}
+    40%{ transform: translateY(-20px); opacity: 1;}
+    100%{ transform: translateY(0); opacity: 1;}
+}
+/* Hero Section Styling */
+
+.hero-section {
+    width: 100%; /* Set the width to 100% */
+    height: 60vh; /* Set a default height for the hero section */
+    background: no-repeat center center; /* Center the background image */
+    background-size: cover; /* Cover the entire section */
+    display: flex;  /* Flexbox layout */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+}
+
+@media (max-width: 768px) { /* Adjustments for smaller devices */
+    .hero-section {
+        height: 40vh; /* Smaller height on smaller devices */
+    }
+}
+/* Specific classes for different page background images */
+
+.hero-about {
+    background-image: url('../images/background01.jpeg'); 
+    filter: blur(10px);
+}
+.hero-resources {
+    background-image: url('../images/background02.jpeg');
+    filter: blur(10px);
+}
+.hero-accesibility {
+    background-image: url('../images/background03.jpeg'); 
+    filter: blur(10px);
+}
+.hero-sitemap {
+    background-image: url('../images/background04.jpeg'); 
+    filter: blur(10px);
+}
+.hero-peer {
+    background-image: url('../images/background05.jpeg'); 
+    filter: blur(10px);
+}
+.hero-career {
+    background-image: url('../images/background06.jpeg'); 
+    filter: blur(10px);
+}
+.hero-reverse {
+    background-image: url('../images/background07.jpg'); 
+    filter: blur(10px);
+}
+.hero-report {
+    background-image: url('../images/background07.jpg');
+    filter: blur(10px);
+}
+.hero-contact {
+    background-image: url('../images/background08.jpeg'); 
+    filter: blur(10px);
+}
+.text-overlay {
+    position: absolute; /* 텍스트를 상대 위치로 배치하기 위해 절대 위치로 설정합니다. */
+    top: 50%; /* 원하는 위치에 따라 조절하세요. 여기서는 중앙에 위치시킵니다. */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 텍스트를 정확한 중앙으로 이동시킵니다. */
+    color: white; /* 텍스트 색상을 원하는 색상으로 설정하세요. */
+    font-size: 42px; /* 텍스트 크기를 조절하세요. */
+    font-weight: bold; /* 필요에 따라 텍스트 굵기를 조절하세요. */
+}
+.video-text-overlay {
+    position: absolute; /* 텍스트를 상대 위치로 배치하기 위해 절대 위치로 설정합니다. */
+    top: 100%; /* 원하는 위치에 따라 조절하세요. 여기서는 중앙에 위치시킵니다. */
+    left: 86%;
+    transform: translate(-50%, -50%); /* 텍스트를 정확한 중앙으로 이동시킵니다. */
+    color: white; /* 텍스트 색상을 원하는 색상으로 설정하세요. */
+    font-size: 42px; /* 텍스트 크기를 조절하세요. */
+    font-weight: bold; /* 필요에 따라 텍스트 굵기를 조절하세요. */
+}
+
+/* Carousel Styling */
+.carousel-item img {
+    width: 100%; /* Set the width to 100% */
+    height: auto; /* Adjust height based on the content */
+}
+/* Responsive adjustments for the carousel items */
+.carousel-item {
+    max-height: auto; /* Adjust height based on the content */
+    object-fit: fill;
+}
+.carousel-caption h1{ 
+    font-size: 2.5vw; /* Adjust font size for screen */
+    color: rgb(255, 252, 252); /* Adjust text color for readability */
+    text-shadow: 5px 5px 8px #000; /* Adds a black shadow for contrast */
+    margin-bottom: 10em; /* Adjust margin for better layout */
+}
+/* Styling for .carousel-inner */
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+@media (max-width: 768px) {
+    .carousel-item {
+        max-height: 60vw; /* Allows a bit more height on smaller screens */
+    }
+    .carousel-caption {
+        font-size: 1.5em; /* Adjust font size for screen */
+    }
+}
+@media (min-width: 769px) {
+    .carousel-item {
+        max-height: 45vw; /* Adjust for medium screens */
+    }
+    .carousel-caption {
+        font-size: 1.5em; /* Adjust font size for screen */
+    }
+}
+@media (min-width: 1024px) {
+    .carousel-item {
+        max-height: 50vw; /* Less height on larger screens to maintain a balanced look */
+    }
+    .carousel-caption {
+        font-size: 1.5em; /* Adjust font size for screen */
+    }
+}
+@media (max-width: 3840px) {
+    .carousel-item {
+        max-height: 60vw; /* Less height on larger screens to maintain a balanced look */
+    }
+    .carousel-caption {
+        font-size: 1.5em; /* Adjust font size for screen */
+    }   
+}
+/* Card Styling */
+.card,
+.category-card,
+.blog-card,
+.video-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.btn-secondary {
+    margin-top: 5px; /* Adds a margin on all sides */
+    margin-bottom: 10px; /* Adds a margin on all sides */
+    padding: 5px; /* Adds padding on all sides */
+}
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover for a lifting effect */
+}
+
+.card-title, 
+.category-card h5, 
+.blog-card h5,  
+.video-card h5 {  
+    color: #333; /* Dark color for the title */
+}
+
+.card-text,
+.category-card p,
+.blog-card p,
+.video-card p {
+    color: #555; /* Slightly lighter color for the text */
+}
+/* Mission */
+.three_con{position:relative;width:100%;height:450px;margin-top:-10px;padding-top:34px;background:#f1f5f8;box-sizing:border-box;text-align:center;}
+.three_con h2{font-size:34px;font-weight:600;color:#83a80b;letter-spacing:-1px;text-align:left !important;}
+.three_con h2 b{font-weight:900;}
+.three_con ul li{position:relative;display:inline-block;vertical-align:top;width:33.3%;margin-top:-100px;}
+.three_con ul li .num{position:absolute;left:50%;transform:translateX(-50%);font-size:300px;font-weight:800;color:#d6e1e9;}
+.three_con ul li p{position:relative;margin-top:210px;padding:20px 0;z-index:2;font-size:16px;line-height:28px;color:#222;font-weight:600;background:#eceee5;}
+
+.value_con{padding-top:0px; background-color: #ffffff;}
+.value_con ul{padding-top:40px;border-top:1px solid #83a80b;}
+.value_con ul li{display:inline-block;vertical-align:top;width:50%;height:420px;padding-top:0px;box-sizing:border-box;text-align:center;}
+.value_con ul li:first-child{border-right:1px solid #83a80b;}
+.value_con ul li .tt{font-size:24px;font-weight:600;color:#83a80b;padding:20px 0 15px 0;}
+.value_con ul li .st{font-size:16px;font-weight:600;line-height:26px;color:#555;letter-spacing:-1px;}
+.value_con ul.w3 {border:none;margin-bottom:95px;}
+.value_con ul.w3 li{width:33%;height:auto;padding-top:0;border:none;}
+.value_con ul.w3 li:nth-child(2){width:34%;}
+
+.incon{position:relative;width:1200px;margin:0 auto;}
+.mtit{font-size:34px;color:#83a80b;font-weight:600;text-align:center;}
+.value_con {
+    padding-top: 75px;
+}
+/* 공용 */
+.infit{font-size:0;letter-spacing:0;word-spacing:0;}
+
+
+/* Testimonial Card Styling */
+.testimonial-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+    background-color: white; /* White background color */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth lift effect on hover */
+    text-align: center; /* Center align the content */
+    height: 100%; /* Ensures uniform height */
+}
+
+.testimonial-card:hover { /* Hover effect */
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+.testimonial-card p:first-child { /* First paragraph in the testimonial */
+    font-style: italic; /* Italicize the testimonial text */
+    color: #555; /* Color for the testimonial text */
+}
+
+.testimonial-card hr { /* Horizontal line */
+    margin-top: 20px; /* Space above the line */
+    margin-bottom: 20px; /* Space below the line */
+}
+
+.testimonial-card h5 { /* Testimonial author */
+    color: #0056b3; /* Color matching the theme */
+}
+
+.testimonial-card p.small { /* Small text */
+    color: #666; /* Slightly darker color for the small text */
+}
+/*찾아오시는길 리스트*/
+.list-rough-map{margin-top: 41px; border-top:1px solid #83a80b;}
+.list-rough-map li{overflow: hidden;border-bottom:1px solid #dfdfdf;}
+.list-rough-map .table-head{background-color: #f7f7f4;border-top:1px solid #83a80b;font-weight: 400;}
+.list-rough-map .item{float: left;line-height: 1;padding: 18px 1.5%;font-size: 14px;font-size: 14px;color:#666;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;font-weight: 600;}
+.list-rough-map .item *{padding: 0;margin: 0;line-height: 1;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;}
+.list-rough-map .item-title{width: 16.25%;margin: 0; font-size: 16px;}
+.list-rough-map .item-address{width:65%; padding-right: 4%;position: relative;}
+.list-rough-map .table-head .item-address{text-indent:16%;}
+.list-rough-map .item-phone{width: 17.25%; text-align:center; float:right;}
+.list-rough-map .item-map{position: absolute;top: 17px;right: 1.5%;}
+
+
+/* Footer Styling */
+footer {
+    background-color: #f8f9fa; /* Light background color */
+    color: #555; /* Text color */
+    padding-top: 20px; /* Space above the footer */
+    padding-bottom: 20px; /* Space below the footer */
+}
+
+footer h5 { /* Footer heading */
+    color: #83a80b; /* Color matching the theme */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+footer a {
+    color: #555; /* Color for links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+footer a:hover { /* Hover effect for links */
+    color: #83a80b; /* Hover color change for links */
+}
+
+/* Form Styling */
+form {
+    background-color: #f5f3ef; /* Light background color for the form */
+    padding: 20px; /* Space around the form content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+}
+
+.form-group label { /* Form labels */
+    color: #83a80b; /* Color matching the theme */
+    font-weight: bold; /* Bold font weight */
+}
+
+.form-control { /* Form input fields */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ced4da; /* Light border color */
+}
+
+.form-control:focus { /* Focus effect for form input fields */
+    border-color: #83a80b; /* Focus border color */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus box shadow */
+}
+
+.btn-primary { /* Primary button */
+    background-color: #83a80b; /* Button background color */
+    border-color: #83a80b; /* Button border color */
+}
+
+.btn-primary:hover { /* Hover effect for primary button */
+    background-color: #a1b367; /* Button background color on hover */
+    border-color: #a1b367;  
+}
+
+/* Container margin for better layout */
+.container.my-5 { /* Margin for the container */
+    margin-top: 3rem; /* Space above the container */
+    margin-bottom: 3rem; /* Space below the container */
+}
+.Beautiful-color{
+    color:#83a80b !important;
+}
+
+/* Align form elements for better visual appeal */
+.form-group { /* Form group */
+    margin-bottom: 1rem; /* Space below the form group */
+}
+@media (max-width: 768px) { /* Adjust form padding and margin for smaller screens */
+    .form-group label { /* Form labels */
+        font-size: 14px; /* Smaller font size for labels */
+    }
+
+    .form-control { /* Form input fields */
+        font-size: 14px; /* Smaller font size for input fields */
+        padding: 10px; /* Smaller padding for input fields */
+    }
+
+    .btn-primary { /* Primary button */
+        font-size: 14px; /* Smaller font size for the button */
+        padding: 10px 20px; /* Smaller padding for the button */
+    }
+    
+    /* Adjust form padding and margin for smaller screens */
+    form { 
+        padding: 15px; /* Smaller padding for the form */ 
+    }
+    
+    /* Enhance readability and usability on smaller devices */
+    .container.my-5 { /* Margin for the container */
+        padding: 15px; /* Smaller padding for the container */
+    }
+}
